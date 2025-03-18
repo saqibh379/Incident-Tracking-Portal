@@ -1,0 +1,51 @@
+.animated-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.printer-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.paper {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 12px);
+  width: 18px;
+  height: 0;
+  background: white;
+  border: 1px solid #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  z-index: -1;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.animated-btn:hover .paper {
+  height: 20px;
+  opacity: 1;
+  top: 70%;
+}
+
+.animated-btn:hover {
+  color: white;
+  background: #007bff;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
